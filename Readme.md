@@ -1,4 +1,6 @@
 # Terrraform Test with EC2 Instnace
+## Objective
+Perform Unit and Integration tests on a terraform Infrastructure as code repository which creates Ec2 instance using modules
 
 ## Project tree
 

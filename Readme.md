@@ -3,7 +3,6 @@
 ## Project tree
 
 ```bash
-.
 ├── Readme.md
 ├── caller.tf
 ├── env_tfvars
@@ -22,16 +21,35 @@
 │   │   └── main.tf
 │   └── keypair_lookup
 │       └── main.tf
-├── variables.tf
-└── z_mytests.tftest.hcl
+├── unittests.tftest.hcl
+└── variables.tf
 ```
 
 ### Test file
 
 unittests.tftest.hcl
 
-#### Commands to Run
+#### Commands to Run the terraform plan
+
+```bash
+terraform plan -var-file=env_tfvars/dev.tfvars
+terraform plan -var-file=env_tfvars/qa.tfvars
+terraform plan -var-file=env_tfvars/uat.tfvars
+```
+
+#### Commands to Run the terraform tests
 
 ```bash
 terraform test -var-file=env_tfvars/dev.tfvars
 ```
+
+#### Commands to Run the terraform tests with specific test file
+
+```bash
+terraform test -var-file=env_tfvars/dev.tfvars -filter unittest2.tftest.hcl
+```
+ <hr />
+ 
+### Youtube video tutorial
+
+- [Terraform Test - Terraform v1.6.0 Native Test Framework](https://www.youtube.com/watch?v=o5mtHtfR45Q)

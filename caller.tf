@@ -7,7 +7,7 @@ module "ec2" {
     aws = aws
   }
 }
-
+#--------------------
 output "ec2_output" {
   value = module.ec2
 }
@@ -15,3 +15,4 @@ output "ec2_output" {
 output "ec2_created_for" {
   value = "DEMO"
 }
+#--------------------

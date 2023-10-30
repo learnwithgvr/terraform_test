@@ -19,5 +19,5 @@ variable "keypair_name" {
 }
 
 data "aws_key_pair" "this" {
-  key_name = "dev-key"
+  key_name = var.keypair_name
 }

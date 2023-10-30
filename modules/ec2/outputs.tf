@@ -21,3 +21,7 @@ output "ec2_instance_details" {
 output "ec2_instance_tags" {
   value = aws_instance.dev_test.tags_all
 }
+
+output "ami_id" {
+  value = aws_instance.dev_test.ami
+}

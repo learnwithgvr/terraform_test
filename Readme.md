@@ -29,9 +29,10 @@ Perform Unit and Integration tests on a terraform Infrastructure as code reposit
 └── variables.tf
 ```
 
-### Test file
+### Terraform Test files 
 
 unittests.tftest.hcl
+unittests2.tftest.hcl
 
 #### Commands to Run the terraform plan
 

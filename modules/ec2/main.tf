@@ -5,8 +5,13 @@ data "aws_ami" "amazon_linux" {
   most_recent = true
 
   filter {
-    name   = "name"
-    values = ["al2023-ami-2023.2.*.0-kernel-*-x86_64"] # Amazon Linux 2 AMI
+    name = "name"
+    # values = ["al2023-ami-2023.*.*.0-kernel-*-x86_64"] 
+    #al2023-ami-2023.4.20240416.0-kernel-6.1-x86_64
+
+    # Amazon Linux 2 AMI
+    values = ["amzn2-ami-kernel-*.*-hvm-*-x86_64-gp2"]
+    #amzn2-ami-kernel-5.10-hvm-2.0.20240412.0-x86_64-gp2
   }
 
   filter {
@@ -41,7 +46,6 @@ data "aws_subnets" "subnets" {
 data "aws_region" "this" {
   provider = aws
 }
-
 
 # ec2 
 resource "aws_instance" "dev_test" {

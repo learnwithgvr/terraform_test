@@ -5,8 +5,11 @@ data "aws_ami" "amazon_linux" {
   most_recent = true
 
   filter {
-    name   = "name"
-    values = ["al2023-ami-2023.2.*.0-kernel-*-x86_64"] # Amazon Linux 2 AMI
+    name = "name"
+    # values = ["al2023-ami-2023.*.*.0-kernel-*-x86_64"] 
+
+    # Amazon Linux 2 AMI
+    values = ["amzn2-ami-kernel-*.*-hvm-*-x86_64-gp2"]
   }
 
   filter {

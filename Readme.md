@@ -51,7 +51,9 @@ terraform test -var-file=env_tfvars/dev.tfvars
 #### Commands to Run the terraform tests with specific test file
 
 ```bash
+terraform test -var-file=env_tfvars/dev.tfvars -filter unittest1.tftest.hcl
 terraform test -var-file=env_tfvars/dev.tfvars -filter unittest2.tftest.hcl
+terraform test -var-file=env_tfvars/dev.tfvars -filter unittests3_override.tftest.hcl
 ```
  <hr />
  
